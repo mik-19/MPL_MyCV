@@ -29,15 +29,15 @@ header_info = {
 # ---------------------------
 professional_summary = {
     'concise': """
-Versatile and analytically driven professional with over a decade of experience at TELUS, focusing on operational efficiency and customer experience. Proven track record in managing high-stakes escalations and improving operational processes through data-driven insights. Bilingual in English and French, with a strong understanding of the wireless industry and a proactive mindset for continuous improvement.
+Versatile and analytically driven professional with over a decade of experience at TELUS, focusing on operational efficiency and customer experience. Proven track record in managing high-stakes escalations and improving operational processes through data-driven insights. Proficient in Microsoft Office Suite with advanced Excel skills. Self-taught in Python programming with focus on data analysis and insights generation. Bilingual in English and French, with a strong understanding of the wireless industry and a proactive mindset for continuous improvement.
 """,
     'detailed': """
-As a dedicated professional with over 10 years at TELUS, I have consistently demonstrated my ability to enhance operational efficiency and elevate customer experiences. My expertise lies in managing complex escalations, leading teams, and implementing process improvements that drive results. With a strong foundation in business analysis and data interpretation, I leverage my skills to provide strategic insights and actionable solutions. My self-driven journey into Python programming has equipped me with the tools to perform advanced data analysis, enabling data-driven decision-making. My bilingual proficiency allows me to communicate effectively with a diverse range of clients and colleagues.
+As a dedicated professional with over 10 years at TELUS, I have consistently demonstrated my ability to enhance operational efficiency and elevate customer experiences. My expertise lies in managing complex escalations, leading teams, and implementing process improvements that drive results. Through data analysis and interpretation, I leverage my skills to provide strategic insights and actionable solutions. My self-driven journey into Python programming has equipped me with the tools to perform advanced data analysis, enabling data-driven decision-making. My bilingual proficiency allows me to communicate effectively with a diverse range of clients and colleagues.
 
-<b>Education and Professional Experience Highlights:</b>
-- Completed the <b>Business Analyst Development Program</b> at TELUS, enhancing my analytical and strategic planning skills.
-- Over a decade of progressive roles at TELUS, from Sales Representative to Operations Manager.
-- Proven ability to lead teams, manage high-stakes escalations, and drive operational efficiencies.
+<b>Professional Experience Highlights:</b>
+- Completing the <b>Business Analyst Development Program</b> at TELUS, enhancing my analytical and strategic planning skills
+- Over a decade of progressive roles at TELUS, from Sales Representative to Operations Manager
+- Proven ability to lead teams, manage high-stakes escalations, and drive operational efficiencies
 """
 }
 
@@ -93,16 +93,20 @@ professional_experience = [
         'dates': "May 2022 - Present",
         'summary': "Manage executive-level escalations for TELUS WLS Business customers, ensuring swift and satisfactory resolutions.",
         'responsibilities': [
-            "Advocate for TELUS' WLS Business customers to resolve escalations.",
-            "Manage regulatory, legal, and media threat escalations.",
-            "Conduct root cause analysis and provide strategic insights.",
-            "Assess, track, and monitor customer incidents to ensure timely resolution.",
-            "Demonstrate strong problem-solving and negotiation skills.",
-            "Prioritize work among competing demands to meet customer expectations.",
-            "Serve as a Subject Matter Expert, coaching team members and driving ownership.",
-            "Analyze credit reduction impacts, resulting in improved credit policies and reduced escalations.",
-            "Conduct temp check analysis, leading to a substantial decrease in escalations.",
-            "Gather and compile data insights to understand common scenarios in using the return exception process."
+            "Advocate for TELUS' WLS Business customers to resolve escalations",
+            "Manage regulatory, legal, and media threat escalations",
+            "Conduct root cause analysis and provide strategic insights",
+            "Assess, track, and monitor customer incidents to ensure timely resolution",
+            "Demonstrate strong problem-solving and negotiation skills",
+            "Prioritize work among competing demands to meet customer expectations",
+            "Serve as a Subject Matter Expert, coaching team members and driving ownership"
+        ],
+        'additional_projects': [
+            "Created Python tools to analyze escalation data and identify trends",
+            "Maintained and enhanced the Escalation Volume Tracker with detailed breakdowns",
+            "Conducted comprehensive analysis of credit reduction impacts on escalations",
+            "Performed analysis of temp check process, leading to workflow improvements",
+            "Gathered insights on return exception scenarios across multiple teams"
         ]
     },
     {
@@ -138,10 +142,10 @@ professional_experience = [
 # Skills and Personal Qualities
 # ---------------------------
 skills_and_qualities = [
-    "Business Analysis & Data Interpretation",
+    "Data Analysis & Interpretation",
+    "Microsoft Office Suite (Advanced Excel)",
     "Python Programming (Self-taught)",
-    "Advanced Excel and Google Sheets",
-    "Business Intelligence Tools: DOMO, Salesforce Reporting",
+    "Business Intelligence: DOMO, Salesforce Reporting",
     "Project Management & Process Improvement",
     "Customer Relationship Management",
     "Strategic Communication & Collaboration",
@@ -244,12 +248,7 @@ mikael.pelletier_lachapelle@telus.com
 
 November 13, 2024
 
-Cheryl C  
-TELUS  
-[Company Address]  
-[City, Province, Postal Code]  
-
-Dear Cheryl C,
+Dear Hiring Manager,
 
 I am writing to express my enthusiastic interest in the **Business Analyst II - 44731** position within TELUS's Marketing team. With over a decade of experience at TELUS, specializing in operational efficiency and customer experience, I am confident in my ability to contribute effectively to your team and drive impactful results.
 
@@ -285,7 +284,29 @@ def apply_custom_styles():
     /* General Styling */
     body {
         font-family: 'Arial', sans-serif;
-        color: #2A2C2E;
+        color: #333333;
+    }
+    
+    /* Navigation Styling */
+    .css-1544g2n {  /* This targets Streamlit's sidebar */
+        background-color: #4B286D;
+        padding: 1rem;
+        width: 100% !important;
+    }
+    
+    .css-1544g2n .stRadio {
+        color: white !important;
+    }
+    
+    /* Radio button text color */
+    .stRadio label {
+        color: white !important;
+    }
+    
+    /* Selected radio button color */
+    .stRadio input:checked + label {
+        color: #ffffff !important;
+        font-weight: bold;
     }
     
     /* Header */
@@ -302,15 +323,27 @@ def apply_custom_styles():
         font-size: 12px;
     }
     
-    /* Section Headers */
+    /* Section Headers with full purple bar */
     .section-header {
-        color: #4B286D;
+        background-color: #4B286D;
+        color: white;
         font-size: 20px;
         font-weight: bold;
         margin-top: 20px;
         margin-bottom: 10px;
-        border-bottom: 2px solid #4B286D;
-        padding-bottom: 5px;
+        padding: 5px 10px;
+        width: 100%;
+    }
+    
+    /* Professional Experience Layout */
+    .experience-container {
+        display: flex;
+        gap: 20px;
+    }
+    
+    .experience-column {
+        flex: 1;
+        padding: 10px;
     }
     
     /* Subsection Headers */
@@ -369,25 +402,26 @@ def apply_custom_styles():
 # ===========================
 
 def header_section(left_aligned=True):
-    if left_aligned:
-        # Create two columns for name and contact details
-        col1, col2 = st.columns([3, 2])
-        with col1:
-            st.markdown(f"<div class='header-title'>{header_info['name']}</div>", unsafe_allow_html=True)
-        with col2:
-            st.markdown(f"<div class='header-details'>{header_info['address']}<br>{header_info['phone']}<br>{header_info['email']}<br>{header_info['languages']}</div>", unsafe_allow_html=True)
-    else:
-        # For pages other than Home, keep name and details left-aligned
-        st.markdown(f"<div class='header-title'>{header_info['name']}</div>", unsafe_allow_html=True)
-        st.markdown(f"<div class='header-details'>{header_info['address']}<br>{header_info['phone']}<br>{header_info['email']}<br>{header_info['languages']}</div>", unsafe_allow_html=True)
+    # Single column, all left-aligned
+    st.markdown(f"""
+        <div style='text-align: left;'>
+            <div class='header-title'>{header_info['name']}</div>
+            <div class='header-details' style='text-align: left;'>
+                {header_info['address']}<br>
+                {header_info['phone']}<br>
+                {header_info['email']}<br>
+                {header_info['languages']}
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
     st.markdown("<hr>", unsafe_allow_html=True)
 
 def home_page():
     header_section(left_aligned=True)
     
-    # Professional Summary
-    st.markdown("<div class='section-header'>Professional Summary</div>", unsafe_allow_html=True)
-    st.markdown(professional_summary['concise'], unsafe_allow_html=True)
+    # Cover Letter Section
+    st.markdown("<div class='section-header'>Cover Letter</div>", unsafe_allow_html=True)
+    st.markdown(f"<div class='cover-letter'>{cover_letter}</div>", unsafe_allow_html=True)
     st.markdown("<hr>", unsafe_allow_html=True)
     
     # Education and Qualifications
@@ -396,11 +430,25 @@ def home_page():
         st.markdown(f"**{edu['degree']}**, {edu['institution']} ({edu['date']})")
     st.markdown("<hr>", unsafe_allow_html=True)
     
-    # Professional Experience
+    # Professional Experience in two columns
     st.markdown("<div class='section-header'>Professional Experience</div>", unsafe_allow_html=True)
-    for exp in professional_experience:
-        st.markdown(f"**{exp['title']}**, {exp['company']} ({exp['dates']})")
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        exp = professional_experience[0]  # First experience
+        st.markdown(f"**{exp['title']}**")
+        st.markdown(f"{exp['company']} ({exp['dates']})")
         st.markdown(f"{exp['summary']}")
+    
+    with col2:
+        for exp in professional_experience[1:]:  # Remaining experiences
+            st.markdown(f"**{exp['title']}**")
+            st.markdown(f"{exp['company']} ({exp['dates']})")
+            st.markdown(f"{exp['summary']}")
+    
+    # Professional Summary
+    st.markdown("<div class='section-header'>Professional Summary</div>", unsafe_allow_html=True)
+    st.markdown(professional_summary['concise'], unsafe_allow_html=True)
     st.markdown("<hr>", unsafe_allow_html=True)
     
     # Skills and Personal Qualities
@@ -418,24 +466,10 @@ def home_page():
             st.markdown(f"- {skill}")
     st.markdown("<hr>", unsafe_allow_html=True)
     
-    # Key Achievements and Projects
+    # Key Achievements and Projects (single column)
     st.markdown("<div class='section-header'>Key Achievements and Projects</div>", unsafe_allow_html=True)
-    # Two-column layout for Key Achievements and Projects
-    cols = st.columns(2)
-    half = len(key_achievements_and_projects['concise']) // 2 + len(key_achievements_and_projects['concise']) % 2
-    col1 = key_achievements_and_projects['concise'][:half]
-    col2 = key_achievements_and_projects['concise'][half:]
-    with cols[0]:
-        for achievement in col1:
-            st.markdown(f"- {achievement}")
-    with cols[1]:
-        for achievement in col2:
-            st.markdown(f"- {achievement}")
-    st.markdown("<hr>", unsafe_allow_html=True)
-    
-    # Cover Letter Section within Home Page
-    st.markdown("<div class='section-header'>Cover Letter</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='cover-letter'>{cover_letter}</div>", unsafe_allow_html=True)
+    for achievement in key_achievements_and_projects['concise']:
+        st.markdown(f"• {achievement}")
     st.markdown("<hr>", unsafe_allow_html=True)
 
 def professional_summary_page():
@@ -492,10 +526,10 @@ def generate_cv_pdf():
     doc = SimpleDocTemplate(
         buffer,
         pagesize=letter,
-        rightMargin=36,
-        leftMargin=36,
-        topMargin=36,
-        bottomMargin=36
+        rightMargin=24,  # Reduced from 36
+        leftMargin=24,   # Reduced from 36
+        topMargin=24,    # Reduced from 36
+        bottomMargin=24  # Reduced from 36
     )
     
     # Define styles
@@ -505,9 +539,9 @@ def generate_cv_pdf():
     banner_style = ParagraphStyle(
         'Banner',
         parent=styles['Heading1'],
-        fontSize=24,
+        fontSize=16,  # Reduced from 20
         textColor=colors.HexColor("#4B286D"),
-        spaceAfter=30,
+        spaceAfter=20,  # Reduced from 30
         spaceBefore=0,
         alignment=TA_LEFT
     )
@@ -515,7 +549,7 @@ def generate_cv_pdf():
     contact_style = ParagraphStyle(
         'Contact',
         parent=styles['Normal'],
-        fontSize=9,
+        fontSize=8,  # Reduced by 10% from 9
         textColor=colors.HexColor("#2A2C2E"),
         spaceAfter=4,
         alignment=TA_LEFT,
@@ -535,7 +569,7 @@ def generate_cv_pdf():
     body_text = ParagraphStyle(
         'BodyText',
         parent=styles['Normal'],
-        fontSize=10,
+        fontSize=9,  # Reduced by 10% from 10
         textColor=colors.HexColor("#2A2C2E"),
         spaceAfter=6,
         alignment=TA_LEFT,
@@ -545,62 +579,87 @@ def generate_cv_pdf():
     bullet_text = ParagraphStyle(
         'BulletText',
         parent=styles['Normal'],
-        fontSize=10,
+        fontSize=9,
         textColor=colors.HexColor("#2A2C2E"),
-        spaceAfter=3,
-        leftIndent=12,
-        bulletIndent=6,
+        spaceAfter=1,    # Reduced from 3
+        leftIndent=8,    # Reduced from 12
+        bulletIndent=4,  # Reduced from 6
         alignment=TA_LEFT,
-        leading=12
+        leading=11       # Reduced from 12
+    )
+    
+    subsection_header = ParagraphStyle(
+        'SubsectionHeader',
+        parent=styles['Normal'],
+        fontSize=11,  # Reduced by 10% from 12
+        textColor=colors.HexColor("#4B286D"),
+        spaceBefore=6,
+        spaceAfter=4,
+        alignment=TA_LEFT
     )
     
     elements = []
     
-    # Page 1: Name, Contact, Professional Summary, Education, Professional Experience
-    # Name and Contact aligned left and right respectively
-    name_contact_table = Table([
-        [Paragraph(f"<b>{header_info['name']}</b>", banner_style),
-         Paragraph(f"{header_info['address']}<br/>{header_info['phone']}<br/>{header_info['email']}<br/>{header_info['languages']}", contact_style)]
-    ], colWidths=[250, 250])
-    name_contact_table.setStyle(TableStyle([
-        ('VALIGN', (0,0), (-1,-1), 'TOP')
-    ]))
-    elements.append(name_contact_table)
+    # Page 1: Name, Contact, Professional Summary, Professional Experience
+    # Name and Contact all left-aligned in single column
+    elements.append(Paragraph(f"<b>{header_info['name']}</b>", banner_style))
+    elements.append(Paragraph(
+        f"{header_info['address']}<br/>"
+        f"{header_info['phone']}<br/>"
+        f"{header_info['email']}<br/>"
+        f"{header_info['languages']}", contact_style
+    ))
     elements.append(HRFlowable(width="100%", thickness=1, color=colors.HexColor("#4B286D")))
     elements.append(Spacer(1, 12))
     
     # Professional Summary
     elements.append(Paragraph("Professional Summary", section_header))
-    elements.append(Paragraph(professional_summary['detailed'], body_text))
-    elements.append(Spacer(1, 12))
     
-    # Education and Qualifications
+    # Split the detailed professional summary into paragraphs and bullets
+    prof_summary = professional_summary['detailed'].split('\n\n')
+    for para in prof_summary:
+        if para.strip().startswith("<b>Education and Professional Experience Highlights:</b>"):
+            # Add subsection header
+            elements.append(Paragraph("Education and Professional Experience Highlights:", subsection_header))
+            # Extract bullet points from the paragraph
+            bullets = para.strip().split('- ')[1:]
+            bullet_items = [ListItem(Paragraph(f"{bullet}", bullet_text)) for bullet in bullets]
+            elements.append(ListFlowable(bullet_items, bulletType='bullet'))
+        else:
+            # Regular paragraph
+            elements.append(Paragraph(para.strip(), body_text))
+        elements.append(Spacer(1, 6))
+    
+    # Professional Experience (Moved to Page 1)
+    elements.append(Paragraph("Professional Experience", section_header))
+    for exp in professional_experience:
+        # Filter out the specific bullet points we want to remove
+        filtered_responsibilities = [
+            resp for resp in exp['responsibilities'] 
+            if not any(excluded in resp for excluded in [
+                "Analyze credit reduction impacts",
+                "Conduct temp check analysis",
+                "Gather and compile data insights"
+            ])
+        ]
+        
+        exp_title = f"<b>{exp['title']}</b>, {exp['company']} ({exp['dates']})"
+        elements.append(Paragraph(exp_title, subsection_header))
+        elements.append(Paragraph(exp['summary'], body_text))
+        bullet_points = [ListItem(Paragraph(resp, bullet_text)) for resp in filtered_responsibilities]
+        elements.append(ListFlowable(bullet_points, bulletType='bullet'))
+        elements.append(Spacer(1, 4))  # Reduced spacing after bullet points from 6
+
+    # Move Education and other sections to page 2
+    elements.append(PageBreak())
+    
+    # Page 2: Education and Qualifications, Skills and Personal Qualities, Key Achievements and Projects
     elements.append(Paragraph("Education and Qualifications", section_header))
     for edu in education:
         edu_text = f"<b>{edu['degree']}</b>, {edu['institution']} ({edu['date']})"
         elements.append(Paragraph(edu_text, body_text))
     elements.append(Spacer(1, 12))
     
-    # Professional Experience
-    elements.append(Paragraph("Professional Experience", section_header))
-    for exp in professional_experience:
-        exp_title = f"<b>{exp['title']}</b>, {exp['company']} ({exp['dates']})"
-        elements.append(Paragraph(exp_title, ParagraphStyle(
-            'SubsectionHeader',
-            parent=styles['Normal'],
-            fontSize=12,
-            textColor=colors.HexColor("#4B286D"),
-            spaceBefore=6,
-            spaceAfter=4,
-            alignment=TA_LEFT
-        )))
-        elements.append(Paragraph(exp['summary'], body_text))
-        bullet_points = [ListItem(Paragraph(resp, bullet_text)) for resp in exp['responsibilities']]
-        elements.append(ListFlowable(bullet_points, bulletType='bullet', start='-'))
-        elements.append(Spacer(1, 6))
-    elements.append(PageBreak())
-    
-    # Page 2: Skills and Personal Qualities, Key Achievements and Projects
     # Skills and Personal Qualities
     elements.append(Paragraph("Skills and Personal Qualities", section_header))
     skill_data = []
@@ -627,30 +686,10 @@ def generate_cv_pdf():
     elements.append(skill_table)
     elements.append(Spacer(1, 12))
     
-    # Key Achievements and Projects
+    # Key Achievements and Projects (modified for single column)
     elements.append(Paragraph("Key Achievements and Projects", section_header))
-    achievement_data = []
-    half = len(key_achievements_and_projects['concise']) // 2 + len(key_achievements_and_projects['concise']) % 2
-    col1 = key_achievements_and_projects['concise'][:half]
-    col2 = key_achievements_and_projects['concise'][half:]
-    for i in range(half):
-        row = []
-        if i < len(col1):
-            row.append(Paragraph(f"• {col1[i]}", body_text))
-        else:
-            row.append(Paragraph("", body_text))
-        if i < len(col2):
-            row.append(Paragraph(f"• {col2[i]}", body_text))
-        else:
-            row.append(Paragraph("", body_text))
-        achievement_data.append(row)
-    achievement_table = Table(achievement_data, colWidths=[250, 250])
-    achievement_table.setStyle(TableStyle([
-        ('VALIGN', (0,0), (-1,-1), 'TOP'),
-        ('LEFTPADDING', (0,0), (-1,-1), 0),
-        ('RIGHTPADDING', (0,0), (-1,-1), 0),
-    ]))
-    elements.append(achievement_table)
+    for achievement in key_achievements_and_projects['concise']:
+        elements.append(Paragraph(f"• {achievement}", body_text))
     elements.append(Spacer(1, 12))
     
     # Line Separator at the bottom
@@ -668,7 +707,7 @@ def generate_cover_letter_pdf():
     doc = SimpleDocTemplate(
         buffer,
         pagesize=letter,
-        rightMargin=72,  # Wider margins for letter format
+        rightMargin=72,
         leftMargin=72,
         topMargin=72,
         bottomMargin=72
@@ -676,60 +715,49 @@ def generate_cover_letter_pdf():
     
     styles = getSampleStyleSheet()
     
-    # Custom styles with TELUS branding
+    # Custom styles with reduced font sizes (15% reduction)
     cover_header_style = ParagraphStyle(
         'CoverHeader',
         parent=styles['Normal'],
-        fontSize=11,
+        fontSize=9,  # Reduced from 11
         textColor=colors.HexColor("#2A2C2E"),
         spaceAfter=12,
         alignment=TA_LEFT,
-        leading=14,
+        leading=12,  # Reduced from 14
         fontName='Helvetica-Bold'
     )
     
     date_style = ParagraphStyle(
         'Date',
         parent=styles['Normal'],
-        fontSize=11,
+        fontSize=9,  # Reduced from 11
         textColor=colors.HexColor("#2A2C2E"),
         spaceBefore=12,
         spaceAfter=12,
         alignment=TA_LEFT,
-        leading=14
-    )
-    
-    recipient_style = ParagraphStyle(
-        'Recipient',
-        parent=styles['Normal'],
-        fontSize=11,
-        textColor=colors.HexColor("#2A2C2E"),
-        spaceBefore=12,
-        spaceAfter=24,
-        alignment=TA_LEFT,
-        leading=14
+        leading=12  # Reduced from 14
     )
     
     body_style = ParagraphStyle(
         'Body',
         parent=styles['Normal'],
-        fontSize=11,
+        fontSize=9,  # Reduced from 11
         textColor=colors.HexColor("#2A2C2E"),
         spaceBefore=12,
         spaceAfter=12,
         alignment=TA_LEFT,
-        leading=14
+        leading=12  # Reduced from 14
     )
     
     signature_style = ParagraphStyle(
         'Signature',
         parent=styles['Normal'],
-        fontSize=11,
+        fontSize=9,  # Reduced from 11
         textColor=colors.HexColor("#2A2C2E"),
-        spaceBefore=36,
+        spaceBefore=24,  # Reduced from 36
         spaceAfter=12,
         alignment=TA_LEFT,
-        leading=14
+        leading=12  # Reduced from 14
     )
     
     elements = []
@@ -745,17 +773,8 @@ def generate_cover_letter_pdf():
     # Date
     elements.append(Paragraph("November 13, 2024", date_style))
     
-    # Recipient block
-    elements.append(Paragraph(
-        "Cheryl C<br/>"
-        "TELUS<br/>"
-        "[Company Address]<br/>"
-        "[City, Province, Postal Code]",
-        recipient_style
-    ))
-    
     # Salutation
-    elements.append(Paragraph("Dear Cheryl C,", body_style))
+    elements.append(Paragraph("Dear Hiring Manager,", body_style))
     
     # Break the body into paragraphs for better spacing
     paragraphs = [
